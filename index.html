@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Sketcher</title>
+</head>
+
+<body>
+  <div class="canvasWrap">
+    <canvas width="1600" height="1000" id="canva"></canvas>
+    <div class="buttons">
+      <button class="shake clear">Clear</button>
+    </div>
+
+  </div>
+  <script src="./randomsketcher.js"></script>
+
+  <style>
+    body {
+      min-height: 100vh;
+      display: grid;
+      align-items: center;
+      justify-items: center;
+      background: white;
+      background: url(https://images.squarespace-cdn.com/content/54d15998e4b0553df778d21d/1587410716077-U1XV124E4NPNL85PC7IO/PixelPro+Animated+Background+5.png?format=1500w&content-type=image%2Fpng);
+      background-size: cover;
+    }
+
+    canvas {
+      border: 15px solid #5737D6;
+      border-radius: 10px;
+      /* Set the width and height to half the actual size so it doesn't look pixelated */
+      width: 800px;
+      height: 500px;
+      background: white;
+    }
+
+    .clear{
+      background-color: #FD297A;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 40%;
+      user-select: none;
+    }
+
+    canvas.shake {
+      animation: shake 0.5s linear 1;
+    }
+
+    @keyframes shake {
+
+      10%,
+      90% {
+        transform: translate3d(-1px, 0, 0);
+      }
+
+      20%,
+      80% {
+        transform: translate3d(2px, 0, 0);
+      }
+
+      30%,
+      50%,
+      70% {
+        transform: translate3d(-4px, 0, 0);
+      }
+
+      40%,
+      60% {
+        transform: translate3d(4px, 0, 0);
+      }
+    }
+  </style>
+</body>
+
+</html>
